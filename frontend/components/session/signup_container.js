@@ -7,6 +7,6 @@ const mdp = dispatch => ({
 });
 
 export default connect(
-  null,
+  undefined,
   mdp
 )(Signup);

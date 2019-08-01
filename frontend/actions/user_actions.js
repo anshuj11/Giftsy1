@@ -20,5 +20,6 @@ export const requestUser = id => dispatch => {
   return fetchUser(id).then(user => dispatch(receiveUser(user)));
 };
 export const makeUser = user => dispatch => {
+  debugger;
   return createUser(user).then(user => dispatch(receiveUser(user)));
 };

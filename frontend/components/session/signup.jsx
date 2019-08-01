@@ -1,4 +1,5 @@
 import React from "react";
+import { SSL_OP_EPHEMERAL_RSA } from "constants";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -18,6 +19,10 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    console.log("This.props:", this.props);
+
+    //sleep(2000);
     this.props
       .createNewUser(this.state)
       .then(() => this.props.history.push("/"));
@@ -27,7 +32,7 @@ class Signup extends React.Component {
     return (
       <div className="session-form">
         <h2>Sign Up </h2>
-        <form>
+        <form className = "SignUpForm">
           <label>
             Username:
             <input
