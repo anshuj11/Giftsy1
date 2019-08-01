@@ -7,17 +7,7 @@
 
     <%# <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel = "stylesheet"
-   type = "css"
-   href = "../../../frontend/giftsy.css" />
-   <% if current_user%>
-   <script>
-      window.currentUser = {
-        "id": <%=currentUser.id %>,
-        "username": <%=currentUser.username %>
-      };
-   </script>
-   <%end%>
+    
   </head >  
 
   <body>
