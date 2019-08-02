@@ -38,12 +38,12 @@ class Login extends React.Component {
     return (
       <div className="session-form">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Giftsy!
-          <br />
-          Please {this.props.formType} or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">
             X
           </div>
+          Welcome to Giftsy!
+          <br />
+          Please {this.props.formType} or {this.props.otherForm}
           {this.renderErrors()}
           <div className="login-form">
             {/* <h2> Log In!</h2>
@@ -51,7 +51,7 @@ class Login extends React.Component {
             <br />
             <br />
             <label>
-              Username:
+              Username <br /> <br />
               <input
                 type="text"
                 value={this.state.username}
@@ -61,7 +61,7 @@ class Login extends React.Component {
             <br />
             <br />
             <label>
-              Password:
+              Password <br /> <br />
               <input
                 type="password"
                 value={this.state.password}

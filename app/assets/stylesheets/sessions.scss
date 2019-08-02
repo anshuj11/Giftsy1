@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .SignUpForm {
-  color: Magenta;
-  border: black solid 1px;
+  color: Black;
+  border: whitesmoke;
   background-color: antiquewhite;
 }
 
@@ -33,7 +33,7 @@ h2 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(240, 232, 232, 0.7);
   z-index: 10;
 }
 
@@ -42,4 +42,15 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 300px;
+  height: 600px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.close-x {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }
