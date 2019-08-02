@@ -1,3 +1,45 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.SignUpForm {
+  color: Magenta;
+  border: black solid 1px;
+  background-color: antiquewhite;
+}
+
+.formLabel {
+  color: orangered;
+  width: 500 px;
+  height: 500 px;
+}
+
+h2 {
+  color: orangered;
+}
+
+.navbar {
+  font-family: "Times New Roman", Times, serif;
+  color: grey;
+}
+
+.logo {
+  color: orangered;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

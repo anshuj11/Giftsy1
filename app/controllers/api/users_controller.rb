@@ -12,10 +12,9 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             sign_in(@user)
-            render :show
+            render "api/users/show"
         else
-            flash.now[:errors] = @user.errors.full_messages
-            render :new
+            render json: @user.errors.full_messages, status: 422
         end
     end
   private

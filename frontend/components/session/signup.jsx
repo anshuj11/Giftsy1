@@ -1,4 +1,5 @@
 import React from "react";
+import { SSL_OP_EPHEMERAL_RSA } from "constants";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -18,16 +19,18 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props
-      .createNewUser(this.state)
-      .then(() => this.props.history.push("/"));
+
+    //console.log("This.props:", this.props);
+
+    //sleep(2000);
+    this.props.signup(this.state).then(() => this.props.history.push("/"));
   }
 
   render() {
     return (
       <div className="session-form">
-        <h2>Sign Up </h2>
-        <form>
+        <h2 className="formLabel">Sign Up </h2>
+        <form className="SignUpForm">
           <label>
             Username:
             <input
@@ -36,7 +39,8 @@ class Signup extends React.Component {
               onChange={this.handleInput("username")}
             />
           </label>
-
+          <br />
+          <br />
           <label>
             Password:
             <input
@@ -44,6 +48,8 @@ class Signup extends React.Component {
               value={this.state.password}
               onChange={this.handleInput("password")}
             />
+            <br />
+            <br />
             <button onClick={this.handleSubmit}>Sign Up!</button>
           </label>
         </form>
