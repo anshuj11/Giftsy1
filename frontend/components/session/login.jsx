@@ -38,10 +38,6 @@ class Login extends React.Component {
     return (
       <div className="session-form">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div onClick={this.props.closeModal} className="close-x">
-            X
-          </div>
-
           <br />
           {/* Please {this.props.formType} or {this.props.otherForm} */}
           <div className="formTypeMessage">
