@@ -15,6 +15,10 @@
 
 h2 {
   color: orangered;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration-style: none;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .navbar {
@@ -85,4 +89,31 @@ h2 {
 .FormLabels {
   text-align: left;
   text-decoration-style: bold;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.login-signup {
+  display: flex;
+  height: 50px;
+  width: 1410px;
+  align-content: space-between;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  color: black;
+  font-size: 16px;
+  text-decoration-color: #fff;
+  border-radius: 3px;
+}
+
+.buttons-rt {
+  display: flex;
+  height: 50px;
+  width: 1410px;
+  flex-direction: row-reverse;
+  align-content: flex-end;
+  z-index: 1;
 }

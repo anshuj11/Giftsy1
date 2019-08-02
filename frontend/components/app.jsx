@@ -12,13 +12,11 @@ export default () => (
   <div>
     <Modal />
     <header>
-      <Link to="/" className="header-link">
-        <h1>Giftsy</h1>
-      </Link>
+      <Link to="/" className="header-link" />
       <GreetingContainer />
     </header>
-    {/* <Route path="/" component={NavBarContainer} />
+    {/* <Route path="/" component={NavBarContainer} />*/}
     <AuthRoute path="/signup" component={SignupContainer} />
-    <AuthRoute path="/login" component={LoginContainer} /> */}
+    <AuthRoute path="/login" component={LoginContainer} />
   </div>
 );
