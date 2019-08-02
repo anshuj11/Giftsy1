@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
-    <div>
+    <div className = "navbar" >
       <h3>Welcome {currentUser.username}!</h3>
       <button onClick={logout}>Logout</button>
     </div>
