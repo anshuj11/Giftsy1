@@ -41,9 +41,13 @@ class Login extends React.Component {
           <div onClick={this.props.closeModal} className="close-x">
             X
           </div>
-          Welcome to Giftsy!
+
           <br />
-          Please {this.props.formType} or {this.props.otherForm}
+          {/* Please {this.props.formType} or {this.props.otherForm} */}
+          <div className="formTypeMessage">
+            {" "}
+            {this.props.formType.toUpperCase()} to Continue{" "}
+          </div>
           {this.renderErrors()}
           <div className="login-form">
             {/* <h2> Log In!</h2>
@@ -51,8 +55,11 @@ class Login extends React.Component {
             <br />
             <br />
             <label>
-              Username <br /> <br />
+              <div className="FormLabels">
+                Username <br /> <br />
+              </div>
               <input
+                className="inputFields"
                 type="text"
                 value={this.state.username}
                 onChange={this.handleInput("username")}
@@ -61,8 +68,11 @@ class Login extends React.Component {
             <br />
             <br />
             <label>
-              Password <br /> <br />
+              <div className="FormLabels">
+                Password <br /> <br />
+              </div>
               <input
+                className="inputFields"
                 type="password"
                 value={this.state.password}
                 onChange={this.handleInput("password")}
@@ -71,11 +81,13 @@ class Login extends React.Component {
             <br />
             <br />
             {/* <button onClick={this.handleSubmit}>Log In!</button> */}
-            <input
+            <button
               className="session-submit"
               type="submit"
               value={this.props.formType}
-            />
+            >
+              Sign in
+            </button>
 
             <br />
             <br />
