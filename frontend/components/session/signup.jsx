@@ -23,9 +23,7 @@ class Signup extends React.Component {
     console.log("This.props:", this.props);
 
     //sleep(2000);
-    this.props
-      .createNewUser(this.state)
-      .then(() => this.props.history.push("/"));
+    this.props.signup(this.state).then(() => this.props.history.push("/"));
   }
 
   render() {
