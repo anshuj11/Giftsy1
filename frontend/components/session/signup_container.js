@@ -4,7 +4,7 @@ import { createNewUser } from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 //import Signup from "./signup";
-import Login from "./login";
+import Login from "./login_form";
 
 const msp = ({ errors }) => {
   return {

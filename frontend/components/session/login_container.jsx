@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { login } from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
-import Login from "./login";
+import Login from "./login_form";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = ({ errors }) => {
