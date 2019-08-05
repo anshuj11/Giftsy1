@@ -1038,7 +1038,9 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ShopSidebarContainer).call(this, props));
     _this.state = {
-      sidebarOpen: open
+      sidebarOpen: true,
+      docked: true,
+      children: null
     }; // this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
 
     return _this;
@@ -1053,12 +1055,13 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
         sidebar: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Shop Manager"),
         open: this.state.sidebarOpen,
-        onSetOpen: this.onSetSidebarOpen,
         styles: {
           sidebar: {
             background: "white"
           }
-        }
+        },
+        children: "Child1",
+        docked: this.state.docked
       });
     }
   }]);

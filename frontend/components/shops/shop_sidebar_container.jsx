@@ -5,7 +5,9 @@ class ShopSidebarContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: open
+      sidebarOpen: true,
+      docked: true,
+      children: null
     };
     // this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
@@ -19,13 +21,10 @@ class ShopSidebarContainer extends React.Component {
       <Sidebar
         sidebar={<b>Shop Manager</b>}
         open={this.state.sidebarOpen}
-        onSetOpen={this.onSetSidebarOpen}
         styles={{ sidebar: { background: "white" } }}
-      >
-        {/* <button onClick={() => this.onSetSidebarOpen(true)}>
-          Open sidebar
-        </button> */}
-      </Sidebar>
+        children="Child1"
+        docked={this.state.docked}
+      />
     );
   }
 }
