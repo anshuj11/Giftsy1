@@ -8,7 +8,7 @@ export const createListing = listing => {
 
 export const fetchListing = id => {
   return $.ajax({
-    url: "/api/listings" + id,
+    url: "/api/listings/" + id,
     method: "GET"
   });
 };

@@ -24,10 +24,10 @@ class ListingForm extends React.Component {
 
   render() {
     return (
-      <div className="listingPage">
-        <ShopSidebarContainer className="ShopSidebar" />
-
-        <form onSubmit={this.handleSubmit}>
+      <div>
+        {/* <ShopSidebarContainer className="shopSidebar" /> */}
+        <div className="aside">Shop Manager</div>
+        <form onSubmit={this.handleSubmit} className="listingForm">
           <h2>Add a new listing</h2>
           <h3>Listing Details</h3>
           <label>

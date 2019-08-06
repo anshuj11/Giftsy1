@@ -1,3 +1,27 @@
-.ShopSidebar {
-  width: 800px;
+.listingPage {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: row;
+}
+
+.shopSidebar {
+  width: 300px;
+  color: red;
+}
+
+.aside {
+  width: 260px;
+  float: left;
+  border-top: 1px solid #21a1e1;
+  border-left: 1px solid #21a1e1;
+  border-right: 1px solid #21a1e1;
+  border-bottom: 1px solid #21a1e1;
+  padding-left: 0px;
+  position: absolute;
+  height: 100%;
+}
+.listingForm {
+  float: right;
+  width: 500px;
 }

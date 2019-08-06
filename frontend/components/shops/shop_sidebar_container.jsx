@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 
+
 class ShopSidebarContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -9,20 +10,18 @@ class ShopSidebarContainer extends React.Component {
       docked: true,
       children: null
     };
-    // this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
-
-  //   onSetSidebarOpen(open) {
-  //     this.setState({ sidebarOpen: open });
-  //   }
 
   render() {
     return (
       <Sidebar
+        // className="shopSidebar"
         sidebar={<b>Shop Manager</b>}
         open={this.state.sidebarOpen}
-        styles={{ sidebar: { background: "white" } }}
-        children="Child1"
+        styles={{
+          sidebar: { background: "white", width: 300 }
+        }}
+        children=" "
         docked={this.state.docked}
       />
     );
