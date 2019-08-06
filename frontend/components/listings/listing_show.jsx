@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Spinner from "../images/spinner";
 
 class ListingShow extends React.Component {
   componentDidMount() {
@@ -18,13 +19,15 @@ class ListingShow extends React.Component {
   render() {
     const { listing } = this.props;
     if (!listing) {
-      return <div>Loading...</div>;
+      return <Spinner />;
     }
 
     return (
       <div>
         <h3>{listing.title}</h3>
         <p>{listing.description}</p>
+        <p> Price: ${listing.price}</p>
+        <p> Shipping: ${listing.shipping}</p>
         <Link to="/listings">Back to Index</Link>
       </div>
     );
