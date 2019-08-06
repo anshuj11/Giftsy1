@@ -10,10 +10,9 @@ const listingsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_LISTINGS:
       newState = merge({}, action.listings);
-      console.log("NewState:", newState);
       return newState;
     case RECEIVE_LISTING:
-      return Object.assign({}, state, { [action.listing.id]: action.listing });
+      return merge({}, state, { [action.listing.id]: action.listing });
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import ListingIndex from "./listing_index";
 import { requestListings } from "../../actions/listing_actions";
 
 const msp = state => {
-  
+    
   return {
     listings: Object.values(state.entities.listings)
   };

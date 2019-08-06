@@ -294,7 +294,6 @@ var requestUser = function requestUser(id) {
 };
 var makeUser = function makeUser(user) {
   return function (dispatch) {
-    debugger;
     return Object(_util_api_util__WEBPACK_IMPORTED_MODULE_0__["createUser"])(user).then(function (user) {
       return dispatch(receiveUser(user));
     });
@@ -323,6 +322,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _listings_listing_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./listings/listing_container */ "./frontend/components/listings/listing_container.jsx");
 /* harmony import */ var _util_route_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util/route_utils */ "./frontend/util/route_utils.jsx");
 /* harmony import */ var _listings_listings_index_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./listings/listings_index_container */ "./frontend/components/listings/listings_index_container.jsx");
+/* harmony import */ var _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./listings/listing_show_container */ "./frontend/components/listings/listing_show_container.jsx");
+
 
 
 
@@ -341,11 +342,16 @@ __webpack_require__.r(__webpack_exports__);
     component: _greetings_greetings_container__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
+    path: "/listings/create",
+    component: _listings_listing_container__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
     path: "/listings",
     component: _listings_listings_index_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: "/listings/create",
-    component: _listings_listing_container__WEBPACK_IMPORTED_MODULE_7__["default"]
+    exact: true,
+    path: "/listings/:id",
+    component: _listings_listing_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_utils__WEBPACK_IMPORTED_MODULE_8__["AuthRoute"], {
     path: "/signup",
     component: _session_signup_container__WEBPACK_IMPORTED_MODULE_6__["default"]
@@ -672,9 +678,7 @@ function (_React$Component) {
   _createClass(ListingIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.getListings().then(function (listings) {
-        return console.log(listings);
-      });
+      this.props.getListings();
     }
   }, {
     key: "render",
@@ -693,6 +697,119 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (ListingIndex);
+
+/***/ }),
+
+/***/ "./frontend/components/listings/listing_show.jsx":
+/*!*******************************************************!*\
+  !*** ./frontend/components/listings/listing_show.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var ListingShow =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ListingShow, _React$Component);
+
+  function ListingShow() {
+    _classCallCheck(this, ListingShow);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ListingShow).apply(this, arguments));
+  }
+
+  _createClass(ListingShow, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.requestListing(this.props.match.params.id);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.listing && prevProps.listing.id != this.props.match.params.id) {
+        this.props.requestListing(this.props.match.params.id);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var listing = this.props.listing;
+
+      if (!listing) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, listing.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, listing.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/listings"
+      }, "Back to Index"));
+    }
+  }]);
+
+  return ListingShow;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ListingShow);
+
+/***/ }),
+
+/***/ "./frontend/components/listings/listing_show_container.jsx":
+/*!*****************************************************************!*\
+  !*** ./frontend/components/listings/listing_show_container.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _listing_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listing_show */ "./frontend/components/listings/listing_show.jsx");
+/* harmony import */ var _actions_listing_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/listing_actions */ "./frontend/actions/listing_actions.js");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    //listing: state.entities.listings[ownProps.match.params.id]
+    listing: state.entities.listings[ownProps.match.params.id]
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    requestListing: function requestListing(id) {
+      return dispatch(Object(_actions_listing_actions__WEBPACK_IMPORTED_MODULE_2__["requestListing"])(id));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_listing_show__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -787,7 +904,6 @@ function Modal(_ref) {
 }
 
 var mapStateToProps = function mapStateToProps(state) {
-  //debugger;
   return {
     modal: state.ui.modal
   };
@@ -1038,7 +1154,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // console.log(this.props);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -1231,16 +1346,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
   var preloadedState = undefined;
-  window.fetchListings = _util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__["fetchListings"];
-  window.requestListings = _actions_listing_actions__WEBPACK_IMPORTED_MODULE_5__["requestListings"];
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
-
-  var getSuccess = function getSuccess(listings) {
-    return console.log(Object(_util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__["receiveListings"])(listings));
-  };
-
-  var posts = Object(_util_listing_api_util__WEBPACK_IMPORTED_MODULE_4__["fetchListings"])();
-  console.log("Posts: ", posts);
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), root);
@@ -1316,11 +1422,10 @@ var listingsReducer = function listingsReducer() {
   switch (action.type) {
     case _actions_listing_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_LISTINGS"]:
       newState = lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, action.listings);
-      console.log("NewState:", newState);
       return newState;
 
     case _actions_listing_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_LISTING"]:
-      return Object.assign({}, state, _defineProperty({}, action.listing.id, action.listing));
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.listing.id, action.listing));
 
     default:
       return state;
