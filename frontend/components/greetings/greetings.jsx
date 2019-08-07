@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
@@ -8,6 +9,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <button onClick={() => openModal("login")}>Sign In</button>
         &nbsp; &nbsp;
         <button onClick={() => openModal("signup")}>Register</button>
+        &nbsp; &nbsp;
+        <Link to="/listings">Discover</Link>
+        &nbsp; &nbsp;
+        <Link to="/listings/create">List your item</Link>
+        &nbsp; &nbsp;
       </div>
     </nav>
   );

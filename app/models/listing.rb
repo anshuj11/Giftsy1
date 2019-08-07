@@ -1,2 +1,3 @@
 class Listing < ApplicationRecord
-end
+    has_many_attached :images
+end 

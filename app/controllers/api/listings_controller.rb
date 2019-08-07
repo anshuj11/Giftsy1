@@ -1,6 +1,7 @@
 class Api::ListingsController < ApplicationController
     def show
         @listing = Listing.find(params[:id])
+        @listing.images.attach(params[:images])
     end
 
     def index
@@ -19,6 +20,6 @@ class Api::ListingsController < ApplicationController
     end
   private
   def listing_params
-    params.require(:listing).permit(:title, :description, :price, :shipping )
+    params.require(:listing).permit(:title, :description, :price, :shipping, images: [] )
   end
 end

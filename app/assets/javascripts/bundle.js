@@ -374,6 +374,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 var Greeting = function Greeting(_ref) {
@@ -394,7 +396,11 @@ var Greeting = function Greeting(_ref) {
       onClick: function onClick() {
         return openModal("signup");
       }
-    }, "Register")));
+    }, "Register"), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/listings"
+    }, "Discover"), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/listings/create"
+    }, "List your item"), "\xA0 \xA0"));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -624,16 +630,27 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "aside"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ListingFormParent"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shopSidebar"
       }, "Shop Manager"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.handleSubmit,
         className: "listingForm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Add a new listing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Listing Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title *", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Add a new listing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "ListingComponentsLabel"
+      }, "Listing Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "Subtext"
+      }, "Tell the world all about your item and why they\u2019ll love it."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormFieldLabels"
+      }, "Title *", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "FormField",
         type: "text",
         value: this.state.title,
         onChange: this.update("title")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormFieldLabels"
+      }, "Description", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "DescriptionBox",
         value: this.state.description,
         onChange: this.update("description")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -644,10 +661,11 @@ function (_React$Component) {
         type: "number",
         value: this.state.shipping,
         onChange: this.update("shipping")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "submit",
-        value: this.props.formType
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleSubmit
+      }, " Publish "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shopSidebar"
+      }));
     }
   }]);
 

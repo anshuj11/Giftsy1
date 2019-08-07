@@ -6,22 +6,65 @@
 }
 
 .shopSidebar {
-  width: 300px;
-  color: red;
+  width: 20%;
 }
 
 .aside {
-  width: 260px;
+  // width: 260px;
   float: left;
   border-top: 1px solid #21a1e1;
   border-left: 1px solid #21a1e1;
   border-right: 1px solid #21a1e1;
   border-bottom: 1px solid #21a1e1;
   padding-left: 0px;
-  position: absolute;
-  height: 100%;
+  flex-grow: 1;
+  // position: absolute;
+  // height: 100%;
 }
 .listingForm {
-  float: right;
-  width: 500px;
+  flex-grow: 2;
+  align-content: center;
+
+  margin: 50px;
+  border: solid grey 1px;
+  // float: right;
+  // width: 500px;
+}
+.ListingFormParent {
+  display: flex;
+}
+
+.ListingComponentsLabel {
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0%;
+  color: #222;
+}
+
+.Subtext {
+  font-size: 14px;
+  color: grey;
+  margin: 0%;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+}
+.FormFieldLabels {
+  font-size: 14px;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+  margin: 40px;
+  padding: 40 px;
+}
+.FormField {
+  width: 70%;
+  align-self: right;
+}
+.DescriptionBox {
+  width: 70%;
+  height: 100px;
 }

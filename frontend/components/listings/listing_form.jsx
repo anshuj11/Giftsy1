@@ -24,26 +24,30 @@ class ListingForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ListingFormParent">
         {/* <ShopSidebarContainer className="shopSidebar" /> */}
-        <div className="aside">Shop Manager</div>
-        <form onSubmit={this.handleSubmit} className="listingForm">
+        <div className="shopSidebar">Shop Manager</div>
+        <form className="listingForm">
           <h2>Add a new listing</h2>
-          <h3>Listing Details</h3>
-          <label>
+          <h3 className="ListingComponentsLabel">Listing Details</h3>
+          <p className="Subtext">
+            Tell the world all about your item and why they’ll love it.
+          </p>
+
+          <label className="FormFieldLabels">
             Title *
             <input
+              className="FormField"
               type="text"
               value={this.state.title}
               onChange={this.update("title")}
             />
           </label>
           <br />
-          <br />
-
-          <label>
+          <label className="FormFieldLabels">
             Description
             <textarea
+              className="DescriptionBox"
               value={this.state.description}
               onChange={this.update("description")}
             />
@@ -70,10 +74,12 @@ class ListingForm extends React.Component {
           </label>
           <br />
           <br />
-          <input type="submit" value={this.props.formType} />
+          {/* <input type="submit" value={this.props.formType} /> */}
+          <button onClick={this.handleSubmit}> Publish </button>
           <br />
           <br />
         </form>
+        <div className="shopSidebar" />
       </div>
     );
   }
