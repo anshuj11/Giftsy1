@@ -1,7 +1,8 @@
 class Api::ListingsController < ApplicationController
     def show
         @listing = Listing.find(params[:id])
-        @listing.images.attach(params[:images])
+       # @listing.image.attach(params[:image])
+       #render :show
     end
 
     def index

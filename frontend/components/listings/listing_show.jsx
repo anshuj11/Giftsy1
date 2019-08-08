@@ -28,6 +28,7 @@ class ListingShow extends React.Component {
         <p>{listing.description}</p>
         <p> Price: ${listing.price}</p>
         <p> Shipping: ${listing.shipping}</p>
+
         <Link to="/listings">Back to Index</Link>
       </div>
     );

@@ -22,10 +22,11 @@
   // height: 100%;
 }
 .listingForm {
+  width: 60%;
   flex-grow: 2;
   align-content: center;
 
-  margin: 50px;
+  margin: 20px;
   border: solid grey 1px;
   // float: right;
   // width: 500px;
@@ -39,14 +40,17 @@
     "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 0%;
   color: #222;
+  margin-bottom: 0px;
+  margin-left: 20px;
 }
 
 .Subtext {
   font-size: 14px;
+  margin-left: 20px;
   color: grey;
-  margin: 0%;
+  margin-top: 0px;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
@@ -57,14 +61,29 @@
   font-size: 14px;
   font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
     "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
-  margin: 40px;
-  padding: 40 px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
+  //border: solid black;
+  width: 100px;
 }
 .FormField {
   width: 70%;
   align-self: right;
 }
 .DescriptionBox {
-  width: 70%;
+  width: 65%;
   height: 100px;
+}
+
+.IntroPic {
+  width: 200px;
+  height: 200px;
+}
+
+.ListingGrid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
 }

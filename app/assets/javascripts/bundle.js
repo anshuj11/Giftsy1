@@ -113,6 +113,7 @@ var receiveListings = function receiveListings(listings) {
   };
 };
 var receiveListing = function receiveListing(listing) {
+  debugger;
   return {
     type: RECEIVE_LISTING,
     listing: listing
@@ -507,7 +508,10 @@ var ListingIndexItem = function ListingIndexItem(_ref) {
   var listing = _ref.listing;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/listings/".concat(listing.id)
-  }, listing.title), "\xA0");
+  }, listing.title), "\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: listing.photoUrl,
+    className: "IntroPic"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ListingIndexItem);
@@ -634,36 +638,40 @@ function (_React$Component) {
         className: "ListingFormParent"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "shopSidebar"
-      }, "Shop Manager"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Shop Manager"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "listingForm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Add a new listing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Add a new listing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "ListingComponentsLabel"
       }, "Listing Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "Subtext"
       }, "Tell the world all about your item and why they\u2019ll love it."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormFieldLabels"
-      }, "Title *", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Title * "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "FormField",
         type: "text",
         value: this.state.title,
         onChange: this.update("title")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormFieldLabels"
-      }, "Description", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, "Description "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "DescriptionBox",
         value: this.state.description,
         onChange: this.update("description")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Price", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormFieldLabels"
+      }, "Price "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "number",
         value: this.state.price,
         onChange: this.update("price")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Shipping", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormFieldLabels"
+      }, "Shipping "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "number",
         value: this.state.shipping,
         onChange: this.update("shipping")
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleSubmit
-      }, " Publish "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " Publish "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "shopSidebar"
       }));
     }
@@ -734,7 +742,9 @@ function (_React$Component) {
           listing: listing
         }));
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, posts));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "ListingGrid"
+      }, posts));
     }
   }]);
 

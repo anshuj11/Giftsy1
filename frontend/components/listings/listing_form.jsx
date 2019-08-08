@@ -27,58 +27,57 @@ class ListingForm extends React.Component {
       <div className="ListingFormParent">
         {/* <ShopSidebarContainer className="shopSidebar" /> */}
         <div className="shopSidebar">Shop Manager</div>
-        <form className="listingForm">
+        <div className="listingForm">
           <h2>Add a new listing</h2>
-          <h3 className="ListingComponentsLabel">Listing Details</h3>
-          <p className="Subtext">
-            Tell the world all about your item and why they’ll love it.
-          </p>
+          <form>
+            <h3 className="ListingComponentsLabel">Listing Details</h3>
+            <p className="Subtext">
+              Tell the world all about your item and why they’ll love it.
+            </p>
 
-          <label className="FormFieldLabels">
-            Title *
+            <label className="FormFieldLabels">Title * </label>
             <input
               className="FormField"
               type="text"
               value={this.state.title}
               onChange={this.update("title")}
             />
-          </label>
-          <br />
-          <label className="FormFieldLabels">
-            Description
+
+            <br />
+            <br />
+            <label className="FormFieldLabels">Description </label>
             <textarea
               className="DescriptionBox"
               value={this.state.description}
               onChange={this.update("description")}
             />
-          </label>
-          <br />
-          <br />
-          <label>
-            Price
+
+            <br />
+            <br />
+            <label className="FormFieldLabels">Price </label>
             <input
               type="number"
               value={this.state.price}
               onChange={this.update("price")}
             />
-          </label>
-          <br />
-          <br />
-          <label>
-            Shipping
+
+            <br />
+            <br />
+            <label className="FormFieldLabels">Shipping </label>
             <input
               type="number"
               value={this.state.shipping}
               onChange={this.update("shipping")}
             />
-          </label>
-          <br />
-          <br />
-          {/* <input type="submit" value={this.props.formType} /> */}
-          <button onClick={this.handleSubmit}> Publish </button>
-          <br />
-          <br />
-        </form>
+
+            <br />
+            <br />
+            {/* <input type="submit" value={this.props.formType} /> */}
+            <button onClick={this.handleSubmit}> Publish </button>
+            <br />
+            <br />
+          </form>
+        </div>
         <div className="shopSidebar" />
       </div>
     );

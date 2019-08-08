@@ -18,7 +18,7 @@ class ListingIndex extends React.Component {
 
     return (
       <div>
-        <ul>{posts}</ul>
+        <ul className="ListingGrid">{posts}</ul>
         {/* <CreatePostFormContainer /> */}
       </div>
     );

@@ -11,10 +11,13 @@ export const receiveListings = listings => ({
   listings
 });
 
-export const receiveListing = listing => ({
-  type: RECEIVE_LISTING,
-  listing
-});
+export const receiveListing = listing => {
+  debugger;
+  return {
+    type: RECEIVE_LISTING,
+    listing
+  };
+};
 
 export const requestListings = () => dispatch => {
   return fetchListings().then(listings => dispatch(receiveListings(listings)));
