@@ -5,13 +5,15 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <div>
       <nav className="login-signup">
-        <h2> Giftsy</h2>
+        <h2 className="NavLinks"> Giftsy</h2>
         <div className="buttons-rt">
           <button onClick={() => openModal("login")}>Sign In</button>
           &nbsp; &nbsp;
           <button onClick={() => openModal("signup")}>Register</button>
           &nbsp; &nbsp;
-          <Link to="/listings">Discover</Link>
+          <Link to="/listings" className="NavLinks">
+            Discover
+          </Link>
           &nbsp; &nbsp;
         </div>
       </nav>
@@ -25,6 +27,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <li>Craft Supplies</li>
         <li>Vintage</li>
       </ul>
+      <h1 className="Byline">When just the thought isn't enough</h1>
     </div>
   );
   const personalGreeting = () => (
@@ -36,7 +39,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
           Log Out
         </button>
         &nbsp; &nbsp;
-        <Link to="/listings/create">List your item</Link>
+        <Link to="/listings/create" className="NavLinks">
+          List your item
+        </Link>
         &nbsp; &nbsp;
       </div>
     </nav>

@@ -385,7 +385,9 @@ var Greeting = function Greeting(_ref) {
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " Giftsy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      className: "NavLinks"
+    }, " Giftsy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "buttons-rt"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
@@ -396,10 +398,13 @@ var Greeting = function Greeting(_ref) {
         return openModal("signup");
       }
     }, "Register"), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/listings"
+      to: "/listings",
+      className: "NavLinks"
     }, "Discover"), "\xA0 \xA0")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       className: "NavList"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Accesories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Clothing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wedding"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toys "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Art"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Craft Supplies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Vintage")));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Accesories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Clothing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wedding"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Toys "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Art"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Craft Supplies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Vintage")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "Byline"
+    }, "When just the thought isn't enough"));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -414,7 +419,8 @@ var Greeting = function Greeting(_ref) {
         className: "header-button",
         onClick: logout
       }, "Log Out"), "\xA0 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/listings/create"
+        to: "/listings/create",
+        className: "NavLinks"
       }, "List your item"), "\xA0 \xA0")) // </hgroup>
 
     );
