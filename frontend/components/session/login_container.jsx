@@ -6,7 +6,8 @@ import Login from "./login_form";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = ({ errors }) => {
-
+  console.log("Errors", errors.session);
+  
   return {
     errors: errors.session,
     formType: "login"

@@ -6,7 +6,22 @@
   border: whitesmoke;
   background-color: antiquewhite;
 }
+.NavList {
+  display: flex;
+  list-style: none;
+}
+.ErrList {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 0px;
+}
 
+.ErrMsg {
+  color: Red;
+  text-align: left;
+  //margin: px;
+}
 .formLabel {
   color: orangered;
   width: 500 px;
@@ -123,5 +138,3 @@ button:hover {
   background-color: black;
   color: white;
 }
-
-

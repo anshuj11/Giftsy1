@@ -7,6 +7,7 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 import Login from "./login_form";
 
 const msp = ({ errors }) => {
+  console.log("ErrorsEtc", errors.session);
   return {
     errors: errors.session,
     formType: "signup"

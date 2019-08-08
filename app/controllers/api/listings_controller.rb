@@ -6,7 +6,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def index
-        @listings = Listing.all;    
+        @listings = Listing.all   
     end
 
     def create

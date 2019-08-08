@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
     # Flash errors, if any.
     # Render :new if invalid credentials (give the user another chance to login)
     if @user.nil?
-      render json:['Invalid username or password.']
+      render json: ["Invalid username or password"], status: 401
     else
     # Log them in and redirect them if we find them
       

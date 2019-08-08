@@ -12,7 +12,7 @@ export const receiveListings = listings => ({
 });
 
 export const receiveListing = listing => {
-  debugger;
+  //debugger;
   return {
     type: RECEIVE_LISTING,
     listing

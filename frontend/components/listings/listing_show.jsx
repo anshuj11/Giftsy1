@@ -25,6 +25,7 @@ class ListingShow extends React.Component {
     return (
       <div>
         <h3>{listing.title}</h3>
+        <img src={listing.photoUrl} className="ListingPic" />
         <p>{listing.description}</p>
         <p> Price: ${listing.price}</p>
         <p> Shipping: ${listing.shipping}</p>
