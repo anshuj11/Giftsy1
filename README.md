@@ -1,24 +1,18 @@
-# README
+# Features
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Giftsy is an online marketplace geared towards finding unique, thoughtful, personalized gifts.
 
-Things you may want to cover:
+It offers the following functionality:
 
-* Ruby version
+* New account creation, login, and Demo login
 
-* System dependencies
+* Create and see listings
 
-* Configuration
+## To do
+* Shops - open and add listings
 
-* Database creation
+* Like listings
 
-* Database initialization
+* follow shops
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
