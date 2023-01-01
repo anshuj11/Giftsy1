@@ -8,7 +8,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.3.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
@@ -19,7 +19,7 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^5.0.1"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -37,7 +37,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.38.0"
+    "webpack": "^5.75.0"
   },
   "engines": {
     "node": "12.6.0",
